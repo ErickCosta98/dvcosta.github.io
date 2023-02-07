@@ -120,44 +120,44 @@ class CellularAutomata{
 
 }
 
-// const cells = new Array(100).fill("").map(() => new Array(100).fill(false));
+const cells = new Array(100).fill("").map(() => new Array(100).fill(false));
 
-// cells[0][4] = true;
-// cells[0][5] = true;
-// cells[1][4] = true;
-// cells[1][5] = true;
-// cells[10][4] = true;
-// cells[10][5] = true;
-// cells[10][6] = true;
-// cells[11][3] = true;
-// cells[11][7] = true;
-// cells[12][2] = true;
-// cells[12][8] = true;
-// cells[13][2] = true;
-// cells[13][8] = true;
-// cells[14][5] = true;
-// cells[15][3] = true;
-// cells[15][7] = true;
-// cells[16][4] = true;
-// cells[16][5] = true;
-// cells[16][6] = true;
-// cells[17][5] = true;
-// cells[20][2] = true;
-// cells[20][3] = true;
-// cells[20][4] = true;
-// cells[21][2] = true;
-// cells[21][3] = true;
-// cells[21][4] = true;
-// cells[22][1] = true;
-// cells[22][5] = true;
-// cells[24][0] = true;
-// cells[24][1] = true;
-// cells[24][5] = true;
-// cells[24][6] = true;
-// cells[34][2] = true;
-// cells[34][3] = true;
-// cells[35][2] = true;
-// cells[35][3] = true;
+cells[0][4] = true;
+cells[0][5] = true;
+cells[1][4] = true;
+cells[1][5] = true;
+cells[10][4] = true;
+cells[10][5] = true;
+cells[10][6] = true;
+cells[11][3] = true;
+cells[11][7] = true;
+cells[12][2] = true;
+cells[12][8] = true;
+cells[13][2] = true;
+cells[13][8] = true;
+cells[14][5] = true;
+cells[15][3] = true;
+cells[15][7] = true;
+cells[16][4] = true;
+cells[16][5] = true;
+cells[16][6] = true;
+cells[17][5] = true;
+cells[20][2] = true;
+cells[20][3] = true;
+cells[20][4] = true;
+cells[21][2] = true;
+cells[21][3] = true;
+cells[21][4] = true;
+cells[22][1] = true;
+cells[22][5] = true;
+cells[24][0] = true;
+cells[24][1] = true;
+cells[24][5] = true;
+cells[24][6] = true;
+cells[34][2] = true;
+cells[34][3] = true;
+cells[35][2] = true;
+cells[35][3] = true;
 
 
 
