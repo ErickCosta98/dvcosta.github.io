@@ -163,7 +163,7 @@ cells[35][3] = true;
 
 
 const ctx = canvas.getContext('2d');
-const celullarAutomata = new CellularAutomata(100, ctx, cells = []);
+const celullarAutomata = new CellularAutomata(100, ctx, cells);
 celullarAutomata.create();
 // celullarAutomata.print();
 setInterval(() => {
