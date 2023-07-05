@@ -120,6 +120,7 @@ class CellularAutomata{
 
 }
 
+/*
 const cells = new Array(100).fill("").map(() => new Array(100).fill(false));
 
 cells[0][4] = true;
@@ -159,11 +160,11 @@ cells[34][3] = true;
 cells[35][2] = true;
 cells[35][3] = true;
 
-
+*/
 
 
 const ctx = canvas.getContext('2d');
-const celullarAutomata = new CellularAutomata(100, ctx, cells);
+const celullarAutomata = new CellularAutomata(100, ctx, []);
 celullarAutomata.create();
 // celullarAutomata.print();
 setInterval(() => {
