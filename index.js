@@ -68,7 +68,7 @@ function scrollanimation() {
 
             const target = this.getAttribute('target');
             if (target) {
-                window.open(targetId, 'target');
+                window.open(targetId, target);
                 return
             }
             window.open(targetId, '_self');
