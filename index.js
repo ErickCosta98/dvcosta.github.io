@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleLanguage() {
     const langElement = document.getElementById("lang");
-    const isSpanish = langElement.innerText === "ES";
+    const isEnglish = langElement.innerText === "EN";
 
-    if (isSpanish) {
+    if (isEnglish) {
         langElement.innerText = "ES";
         // Mostrar los elementos en español con la clase "spanish"
         document.querySelectorAll(".spanish").forEach(elm => {
