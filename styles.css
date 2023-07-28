@@ -137,18 +137,20 @@ svg {
 }
 .content-data{
   width: 100%;
-  padding: 10rem;
+  padding: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .content-data-colum{
   width: 50%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  padding: 2rem;
+  flex-direction: column;
+  padding: 3rem;
 }
 
 @keyframes aurora-1 {
@@ -544,12 +546,12 @@ p{
   .content-data {
     /* Adjust the padding for smaller screens */
     padding: 2rem;
-    flex-direction: column;
   }
 
   .content-data-colum {
     /* Adjust the width for smaller screens */
     width: 100%;
+    
   }
   .about__title{
     font-size: 2rem;
@@ -560,7 +562,6 @@ p{
   
   .about__content{
     margin: 1rem;
-    padding: 1rem;  
   }
 }
 
