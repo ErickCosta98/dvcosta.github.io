@@ -526,6 +526,9 @@ p{
 
 @media screen and (max-width: 767px) {
 
+  .title{
+    font-size: clamp(4rem, 6vw, 4rem);
+  }
 
   .wrapper .icon {
     width: 40px;
@@ -565,23 +568,5 @@ p{
   }
 }
 
-/* Media query for screens smaller than 1024px */
-@media screen and (max-width: 1023px) {
-  .title {
-    /* Adjust the font size for smaller screens */
-    font-size: clamp(2rem, 6vw, 4rem);
-  }
 
-  /* ... Other styles you want to adjust for smaller screens ... */
-}
 
-/* Media query for screens smaller than 1200px */
-
-@media screen and (max-width: 1199px) {
-  .title {
-    /* Adjust the font size for smaller screens */
-    font-size: clamp(2rem, 6vw, 4rem);
-  }
-
-  /* ... Other styles you want to adjust for smaller screens ... */
-}
