@@ -121,6 +121,36 @@ body {
     aurora-4 24s ease-in-out infinite alternate;
 }
 
+.about__img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+  /* color white*/
+  fill: #fff;
+}
+.content-data{
+  width: 100%;
+  padding: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-data-colum{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
 @keyframes aurora-1 {
   0% {
     top: 0;
@@ -279,6 +309,8 @@ body::-webkit-scrollbar {
   height: 24px;
 }
 
+
+
 p{
   font-size: 1.5rem;
   border-radius: 5px;
@@ -361,6 +393,10 @@ p{
 .paused * { 
 	animation-play-state: paused;
 }
+
+/* matener el footer hasta el final de la pagina */
+
+
 
 
 .footer{
@@ -483,24 +519,68 @@ p{
   background: #0a66c2;
   color: #ffffff;
 }
-#blob {
-  background-color: white;
-  height: 20vmax;
-  aspect-ratio: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient(to right,var(--clr-4), var(--clr-1));
-  animation: rotate 20s infinite;
-  opacity: 0.8;
-  z-index: -2;
+
+
+
+@media screen and (max-width: 767px) {
+
+
+  .wrapper .icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  svg{
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .content-data {
+    /* Adjust the padding for smaller screens */
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .content-data-colum {
+    /* Adjust the width for smaller screens */
+    width: 100%;
+  }
+  .about__title{
+    font-size: 2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    word-wrap: break-word;
+  }
+  
+  .about__content{
+    margin: 1rem;
+    padding: 1rem;  
+  }
 }
-#blur {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  backdrop-filter: blur(12vmax);
-  z-index: -1;
+
+/* Media query for screens smaller than 1024px */
+@media screen and (max-width: 1023px) {
+  .title {
+    /* Adjust the font size for smaller screens */
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+
+  /* ... Other styles you want to adjust for smaller screens ... */
+}
+
+/* Media query for screens smaller than 1200px */
+
+@media screen and (max-width: 1199px) {
+  .title {
+    /* Adjust the font size for smaller screens */
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+
+  /* ... Other styles you want to adjust for smaller screens ... */
 }
