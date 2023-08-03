@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+
+body{
+  background: black;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+svg{
+    
+  display: block;
+  overflow: hidden; 
+  background: black;
+}
+
+h4{
+    font: 1em/1 'Share Tech Mono', sans-serif;
+    color: white;
+    margin: 0;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
