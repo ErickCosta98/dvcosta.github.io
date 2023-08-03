@@ -21,6 +21,7 @@ body {
   background-color: var(--bg);
   color: #fff;
   font-family: "Inter", "DM Sans", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -28,6 +29,18 @@ body {
 *::after {
   font-family: inherit;
   box-sizing: border-box;
+}
+
+.idioma{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
 }
 
 .content {
@@ -106,6 +119,38 @@ body {
   bottom: -50%;
   animation: aurora-border 6s ease-in-out infinite,
     aurora-4 24s ease-in-out infinite alternate;
+}
+
+.about__img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+  /* color white*/
+  fill: #fff;
+}
+.content-data{
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.content-data-colum{
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
 }
 
 @keyframes aurora-1 {
@@ -231,24 +276,297 @@ body::-webkit-scrollbar {
   flex-direction: column;
 }
 
-/* el botton debe de estar hasta abajo del contenedor  */
-.button__container{
+.button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh; /* Ajusta la altura según tus necesidades */
+}
 
+.button {
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out; /* Asegura una transición suave para la animación */
+  animation: anim-breathing infinite 1s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+  z-index: 1;
+}
+
+.button:hover {
+  transform: scale(1.2); /* Escala el botón al hacer hover para simular la respiración */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Opcional: añade una sombra al botón al hacer hover */
+}
+
+/* Estilos del icono (puedes personalizar esto según el icono que estés usando) */
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+p{
+  font-size: 1.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  word-wrap: break-word;
+}
+
+.about__title{
+  font-size: 2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  word-wrap: break-word;
+}
+
+.about__content{
+  margin: 5rem;
+  padding: 5rem;  
+}
+.animate__animated.animate__fadeInUp{
+  animation-duration: 1s;
+}
+
+
+/* a partir de aqui el CSS de las animaciones */
+
+@keyframes anim-fade-in { from { opacity: 0; } to { opacity: 1 } }
+
+@keyframes anim-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+ }
+
+
+@keyframes anim-up { 
+	from { opacity: 0; transform: translateY(100px); } 
+	to { opacity: 1; transform: translateY(0px); }  
+}		
+
+@keyframes anim-down { 
+	from { opacity: 0; transform: translateY(-100px); } 
+	to { opacity: 1; transform: translateY(0px); }  
+}		
+
+@keyframes anim-left { 
+	from { opacity: 0; transform: translateX(100px); } 
+	to { opacity: 1; transform: translateX(0px); }  
+}		
+
+@keyframes anim-right { 
+	from { opacity: 0; transform: translateX(-100px); } 
+	to { opacity: 1; transform: translateX(0px); }  
+}		
+
+@keyframes anim-breathing{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+  
+}
+
+
+.anim-up, .anim-down, .anim-left, .anim-right, .anim-fade-in {
+	animation-duration: 1s; /* la animacion dura X segundos */
+	animation-delay: 0.5s; /* esperamos X segundos antes de hacer la animacion */			
+	animation-fill-mode: both; /* aplica estilos de la animacion antes y despues de reproducirla */
+}
+
+.anim-up { animation-name: anim-up; }
+.anim-down { animation-name: anim-down; }
+.anim-left { animation-name: anim-left; }
+.anim-right { animation-name: anim-right; }
+.anim-fade-in { animation-name: anim-fade-in; }
+
+.anim-pause-2 { animation-delay: 2s; } /* la animacion empieza en 2 seg. */		
+.anim-pause-3 { animation-delay: 3s; } /* la animacion empieza en 3 seg. */
+.anim-pause-4 { animation-delay: 4s; } /* la animacion empieza en 4 seg. */
+.anim-pause-5 { animation-delay: 5s; } /* la animacion empieza en 5 seg. */
+
+/* todas las animaciones pausadas */
+.paused * { 
+	animation-play-state: paused;
+}
+
+/* matener el footer hasta el final de la pagina */
+
+
+
+
+.footer{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+}
+
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #000000;
 }
 
-.button__container a{
-  text-decoration: none;
-  font-size: 2.5rem;
-  margin: 1rem;
-  padding: 1rem;
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #0c0c0c;
+  padding: 5px 8px;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #00a884;
+  color: #ffffff;
+}
+
+/* linkedin */
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0a66c2;
+  color: #ffffff;
 }
 
 
-/* transicion para ir a una nueva seccion */
+
+@media screen and (max-width: 767px) {
+
+  .title{
+    font-size: clamp(4rem, 6vw, 4rem);
+  }
+
+  .wrapper .icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  svg{
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .content-data {
+    /* Adjust the padding for smaller screens */
+    padding: 2rem;
+  }
+
+  .content-data-colum {
+    /* Adjust the width for smaller screens */
+    width: 100%;
+    
+  }
+  .about__title{
+    font-size: 2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    word-wrap: break-word;
+  }
+  
+  .about__content{
+    margin: 1rem;
+  }
+}
+
+
 
