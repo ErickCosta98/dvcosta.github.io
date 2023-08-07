@@ -524,49 +524,7 @@ p{
 
 
 
-@media screen and (max-width: 767px) {
 
-  .title{
-    font-size: clamp(4rem, 6vw, 4rem);
-  }
-
-  .wrapper .icon {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    margin: 5px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
-  svg{
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .content-data {
-    /* Adjust the padding for smaller screens */
-    padding: 2rem;
-  }
-
-  .content-data-colum {
-    /* Adjust the width for smaller screens */
-    width: 100%;
-    
-  }
-  .about__title{
-    font-size: 2rem;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    word-wrap: break-word;
-  }
-  
-  .about__content{
-    margin: 1rem;
-  }
-}
 
 
 
