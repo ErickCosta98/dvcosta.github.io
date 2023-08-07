@@ -158,3 +158,4 @@ function textAnimationRandom(elm) {
         }, 30);
     }
 }
+
