@@ -536,6 +536,10 @@ p{
   }
 
   .icon-svg{
+    width: 3rem;
+    height: 3rem;
+  }
+  .bar-circle {
     width: 5rem;
     height: 5rem;
   }
